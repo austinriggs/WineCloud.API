@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineCloud2.API", "WineCloud2.API\WineCloud2.API.csproj", "{A94FD176-C4F2-423B-B8AC-8F9EF740DB84}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2DA1B15-A4AA-42D3-BB8C-4191F706F63C} = {F2DA1B15-A4AA-42D3-BB8C-4191F706F63C}
+		{FABC1F9A-A345-43B0-AE37-597BAE3CD190} = {FABC1F9A-A345-43B0-AE37-597BAE3CD190}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineCloud2.Models", "WineCloud2.Models\WineCloud2.Models.csproj", "{F2DA1B15-A4AA-42D3-BB8C-4191F706F63C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineCloud2.Domain", "WineCloud2.Domain\WineCloud2.Domain.csproj", "{FABC1F9A-A345-43B0-AE37-597BAE3CD190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A94FD176-C4F2-423B-B8AC-8F9EF740DB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94FD176-C4F2-423B-B8AC-8F9EF740DB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94FD176-C4F2-423B-B8AC-8F9EF740DB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94FD176-C4F2-423B-B8AC-8F9EF740DB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DA1B15-A4AA-42D3-BB8C-4191F706F63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DA1B15-A4AA-42D3-BB8C-4191F706F63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DA1B15-A4AA-42D3-BB8C-4191F706F63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DA1B15-A4AA-42D3-BB8C-4191F706F63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABC1F9A-A345-43B0-AE37-597BAE3CD190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABC1F9A-A345-43B0-AE37-597BAE3CD190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABC1F9A-A345-43B0-AE37-597BAE3CD190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABC1F9A-A345-43B0-AE37-597BAE3CD190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DF957DB-1EEE-41CF-9392-C815CDAAB63D}
+	EndGlobalSection
+EndGlobal
