@@ -13,6 +13,8 @@ namespace WineCloud2.Models.DAL
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
+        public Guid UserId { get; set; }
+
         public Guid BottleTypeId { get; set; }
 
         [StringLength(16)]
@@ -60,6 +62,8 @@ namespace WineCloud2.Models.DAL
 
         [StringLength(256)]
         public string Notes { get; set; }
+
+        public virtual User User { get; set; }
 
         public virtual BottleType BottleType { get; set; }
 

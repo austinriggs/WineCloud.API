@@ -12,7 +12,11 @@ namespace WineCloud2.API.Controllers
     [ApiController]
     public class UsersController : Controller
     {
+        private readonly Guid _userId;
+        private readonly Guid _auth0UserId;
+
         private IUserService _userService;
+        
 
         public UsersController(IUserService service)
         {

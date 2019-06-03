@@ -11,7 +11,7 @@ namespace WineCloud2.API.Controllers
 {
     [Route("api/cellars")]
     [ApiController]
-    [Authorize]
+    [Authorize("write:cellars")]
     public class CellarsController : Controller
     {
         private ICellarService _cellarService;

@@ -10,10 +10,14 @@ namespace WineCloud2.Models.DAL
 
         public Guid Id { get; set; }
 
+        public Guid UserId { get; set; }
+
         public string Description { get; set; }
 
         public virtual List<Rack> Racks { get; set; }
 
         public virtual List<Bottle> Bottles { get; set; }
+
+        public virtual User User { get; set; }
     }
 }
