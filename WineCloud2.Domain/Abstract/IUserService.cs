@@ -9,5 +9,7 @@ namespace WineCloud2.Domain.Abstract
     public interface IUserService
     {
         Task<UserVM> CreateUserAsync(UserVM user);
+
+        Task<UserVM> GetUserByEmail(string email);
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WineCloud2.Domain.Abstract;
@@ -48,6 +50,31 @@ namespace WineCloud2.Domain.Concrete
                 throw;
             }
             
+        }
+
+        public async Task<UserVM> GetUserByEmail(string email)
+        {
+            try
+            {
+                var user = await _ctx.Users
+                    .Where(p => p.Email.Equals(email))
+                    .Select(p => new UserVM
+                    {
+                        Id = p.Id,
+                        Email = p.Email,
+                        FirstName = p.FirstName,
+                        LastName = p.LastName,
+                        CreatedDateTime = p.CreatedDateTime
+                    })
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync();
+
+                return user;
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

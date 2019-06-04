@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WineCloud2.Domain.Abstract;
 using WineCloud2.Models.ViewModels;
@@ -38,5 +39,23 @@ namespace WineCloud2.API.Controllers
             }
             
         }
+
+        [HttpGet]
+        [Route("{email}")]
+        [Authorize]
+        public async Task<IActionResult> GetUser(string email)
+        {
+            try
+            {
+                var user = await _userService.GetUserByEmail(email);
+
+                return Ok(user);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }
